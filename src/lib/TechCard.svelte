@@ -1,13 +1,22 @@
 <script>
+	import { browser } from '$app/env';
 	export let techStack;
+	let theme = 'light';
+	if (browser) {
+		theme = localStorage.getItem('theme');
+	}
+	$: darkTheme = techStack.name === 'MongoDB'  && theme ==="dark"? 'add-dark' : ''
 </script>
 
 <div class="tech-card">
 	<div class="name"><p>{techStack.name}</p></div>
-	<img src={techStack.src} alt={techStack.src} />
+	<img src={techStack.src} alt={techStack.src} class={darkTheme} />
 </div>
 
 <style>
+	.add-dark {
+		filter: invert(100%) hue-rotate(222deg);
+	}
 	.tech-card {
 		max-width: 100px;
 		position: relative;
@@ -16,14 +25,14 @@
 	img {
 		width: 100%;
 		object-fit: cover;
-		/* filter: invert(100%) hue-rotate(222deg); */
 	}
 	.name {
 		position: absolute;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: var(--bg-solar);
+		background: rgba(51, 51, 51, 0.5);
+		color: white;
 		width: 100%;
 		text-align: center;
 		visibility: hidden;

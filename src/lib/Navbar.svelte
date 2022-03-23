@@ -74,20 +74,22 @@
 		</li>
 		<!-- svelte-ignore a11y-missing-attribute -->
 		<li class="nav-item">
-			<a href="" on:click={toggleLanguage}><img src={language} alt="" width="28" /></a>
+			<a href="" on:click={toggleLanguage}><img src={language} alt="" width="28" title={language === "eng.png"? "Switch to Turkish": "İngilizceye çevir"} /></a>
 		</li>
 	</ul>
 </nav>
 
 <style>
 	a {
-		font-size: small;
+		font-size: 15px;
 	}
 	a:hover {
 		color: #00a5ce;
 	}
 	.logo-p {
 		width: 50px;
+		box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+		border-radius: 50%;
 	}
 	.navbar {
 		height: 70px;

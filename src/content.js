@@ -253,6 +253,6 @@ export const techStacks = [
 	{ name: 'Svelte.js', src: 'svelte.png' },
 	{ name: 'Vue.js', src: 'vue.png' },
 	{ name: 'git', src: 'git.png' },
-	{ name: 'MongoDB', src: 'mongo.png' },
-	{ name: 'npm', src: 'npm.png' }
+	{ name: 'npm', src: 'npm.png' },
+	{ name: 'MongoDB', src: 'mongo.png' }
 ];

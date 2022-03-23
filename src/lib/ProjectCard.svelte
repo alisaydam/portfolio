@@ -65,6 +65,7 @@
 		border-radius: 10px;
 		background-color: var(--bg-dropdown);
 		color: var(--text);
+		box-shadow: rgba(59, 59, 59, 0.2) 0px 2px 8px 0px;
 	}
 	.active {
 		background-color: #00a5ce;
