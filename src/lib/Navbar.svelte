@@ -1,5 +1,9 @@
 <script>
+	import { createEventDispatcher } from 'svelte';
 	import { onMount } from 'svelte';
+
+	const dispatch = createEventDispatcher();
+
 	let solar;
 	export let content;
 	const darkButton = () => {
@@ -37,14 +41,20 @@
 		isSolar && document.body.classList.add('solar');
 		console.log(theme);
 	});
+	let language = 'eng.png';
+
+	const toggleLanguage = () => {
+		language = language === 'eng.png' ? 'tr.png' : 'eng.png';
+		dispatch('language', language);
+	};
 </script>
 
 <nav class="navbar">
 	<ul class="navbar-nav">
-		<li class="nav-item"><a href=""><img class="logo-p logo" src="p-logo.png" alt="" /></a></li>
-		<li class="nav-item"><a href="">{content.navbar.about}</a></li>
-		<li class="nav-item"><a href="">{content.navbar.techStack}</a></li>
-		<li class="nav-item"><a href="">{content.navbar.projects}</a></li>
+		<li class="nav-item"><a href="#top"><img class="logo-p logo" src="p-logo.png" alt="" /></a></li>
+		<li class="nav-item"><a href="#tech-stack">{content.navbar.techStack}</a></li>
+		<li class="nav-item"><a href="#projects">{content.navbar.projects}</a></li>
+		<li class="nav-item"><a href="#contact">{content.navbar.contact}</a></li>
 		<!-- Dropdown -->
 		<li class="nav-item has-dropdown">
 			<a href="">{content.navbar.theme}</a>
@@ -62,10 +72,20 @@
 				</li>
 			</ul>
 		</li>
+		<!-- svelte-ignore a11y-missing-attribute -->
+		<li class="nav-item">
+			<a href="" on:click={toggleLanguage}><img src={language} alt="" width="28" /></a>
+		</li>
 	</ul>
 </nav>
 
 <style>
+	a {
+		font-size: small;
+	}
+	a:hover {
+		color: #00a5ce;
+	}
 	.logo-p {
 		width: 50px;
 	}

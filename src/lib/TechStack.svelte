@@ -4,7 +4,7 @@
 	export let content;
 </script>
 
-<h2>{content.techStack}</h2>
+<h2 id="tech-stack">{content.techStack}</h2>
 <div class="container">
 	{#each techStacks as techStack}
 		<TechCard {techStack} />

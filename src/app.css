@@ -60,6 +60,17 @@ body {
 	background: var(--bg);
 	transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
+body::-webkit-scrollbar {
+	width: 0.25rem;
+  }
+  
+  body::-webkit-scrollbar-track {
+	background: #1e1e24;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+	background: #6649b8;
+  }
 ul {
 	list-style-type: none;
 	margin: 0;

@@ -6,7 +6,7 @@
 	let activeTab = content.projects.projectTabs[0];
 </script>
 
-<h2>{content.projects.title}</h2>
+<h2 id="projects">{content.projects.title}</h2>
 <div class="container">
 	{#each content.projects.projects as project}
 		<ProjectCard {tabs} {activeTab} {project} />
@@ -21,7 +21,7 @@
 		max-width: 1100px;
 		margin: auto;
 		display: flex;
-		justify-content: start;
+		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
 	}

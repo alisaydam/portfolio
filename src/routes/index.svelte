@@ -4,13 +4,23 @@
 	import Header from '$lib/Header.svelte';
 	import TechStack from '$lib/TechStack.svelte';
 	import Projects from '$lib/Projects.svelte';
+	import Footer from '$lib/Footer.svelte';
 	import { turkishContent, englishContent } from '../content';
+
+	$: content = englishContent;
+
+	const toggleLanguage = (e)=> {
+		e.detail === "tr.png" ? content = turkishContent : content = englishContent
+	}
+
+
 </script>
 
-<Navbar content={turkishContent} />
+<Navbar {content} on:language={toggleLanguage}/>
 <Header />
 <TechStack content={englishContent} />
 <Projects content={englishContent} />
+<Footer />
 
 <style>
 	 
