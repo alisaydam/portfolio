@@ -573,7 +573,9 @@ img {
         gap: 1rem, 0.5rem;
     }
 }
-
+.go-back{
+	display: none;
+}
 /* For wider screen size */
 @media screen and (min-width: 700px){
     body{
@@ -635,4 +637,11 @@ img {
         grid-template-columns: repeat(4, max-content);
         column-gap: 3.5rem;
     }
+	.go-back{
+		position: absolute;
+		right: 5rem;
+		top: 5rem;
+		display: inline-block;
+	}
+
 }

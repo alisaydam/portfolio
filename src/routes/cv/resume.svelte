@@ -47,6 +47,9 @@
 
 <svelte:window bind:scrollY={y} />
 <body>
+	<a href="https:www.alisaydam.one" class="nav__link go-back">
+		<i class="bx bxs-left-arrow-circle nav__icon" /> 
+	</a>
 	<header class="l-header" id="header">
 		<nav class="nav bd-container">
 			<a href="#" class="nav__logo">Smith</a>

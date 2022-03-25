@@ -18,6 +18,7 @@
 
 <Navbar {content} on:language={toggleLanguage}/>
 <Header />
+<a href="/cv/resume">cccc</a>
 <TechStack content={englishContent} />
 <Projects content={englishContent} />
 <Footer />
