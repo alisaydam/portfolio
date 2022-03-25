@@ -135,8 +135,8 @@
 								<i class="bx bx-phone home__icon" />+90 543 355 27 94
 							</span>
 						</div>
+						<i class="bx bx-{themeIcon} change-theme" title="Theme" on:click={toggleTheme} />
 						<a download="" href={themeIcon === "moon" ? "/ali-saydam-light.pdf": "/ali-saydam-dark.pdf"} >
-							<i class="bx bx-{themeIcon} change-theme" title="Theme" on:click={toggleTheme} />
 							<i
 								class="bx bx-download generate-pdf"
 								title="Generate PDF"
