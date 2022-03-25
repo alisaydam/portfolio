@@ -1,5 +1,6 @@
-<script>
-	import css from '../../cv.css';
+<script> 
+	import cv from '../../cv.css';
+
 	let active = false;
 	let y;
 	$: showScrollTopButton = y > 200 ? true : false;
@@ -46,7 +47,7 @@
 
 <svelte:window bind:scrollY={y} />
 <body>
-	<a href="https://www.alisaydam.one" class="nav__link go-back">
+	<a href="/" class="nav__link go-back">
 		<i class="bx bxs-left-arrow-circle nav__icon" />
 	</a>
 	<header class="l-header" id="header">
@@ -115,7 +116,11 @@
 
 							<!-- Download Button -->
 							<div>
-								<a download=""  href={themeIcon === "moon" ? "/ali-saydam-light.pdf": "/ali-saydam-dark.pdf"}  class="home__button-movil">Download</a>
+								<a
+									download=""
+									href={themeIcon === 'moon' ? '/ali-saydam-light.pdf' : '/ali-saydam-dark.pdf'}
+									class="home__button-movil">Download</a
+								>
 							</div>
 						</div>
 
@@ -136,12 +141,11 @@
 							</span>
 						</div>
 						<i class="bx bx-{themeIcon} change-theme" title="Theme" on:click={toggleTheme} />
-						<a download="" href={themeIcon === "moon" ? "/ali-saydam-light.pdf": "/ali-saydam-dark.pdf"} >
-							<i
-								class="bx bx-download generate-pdf"
-								title="Generate PDF"
-								id="resume-button"
-							/></a
+						<a
+							download=""
+							href={themeIcon === 'moon' ? '/ali-saydam-light.pdf' : '/ali-saydam-dark.pdf'}
+						>
+							<i class="bx bx-download generate-pdf" title="Generate PDF" id="resume-button" /></a
 						>
 					</div>
 					<!-- Theme change button -->
@@ -417,3 +421,114 @@
 		<i class="bx bx-up-arrow-alt scrolltop__icon" />
 	</a>
 </body>
+
+<style>
+ 	
+body {
+	margin: 0 0 var(--header-height) 0;
+	padding: 0;
+	font-family: var(--body-font);
+	font-size: var(--normal-font-size);
+	background-color: var(--body-color);
+	color: var(--text-color);
+	height: 100%;
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+	margin: 0;
+}
+
+h1,
+h2,
+h3 {
+	color: var(--title-color);
+	font-weight: var(--font-medium);
+}
+ul {
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+@media screen and (min-width: 700px){
+    body{
+        margin: 3rem 0;
+    }
+
+    .bd-container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .l-header,
+    .scrolltop{
+        display: none;
+    }
+    .resume{
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        background-color: var(--container-color);
+        box-shadow: rgba(13, 12, 12, .15);
+    }
+
+    .resume__left{
+        background-color: var(--container-color-alt);
+    }
+
+    .resume__left,
+    .resume__right{
+        padding: 0 1.5rem;
+    }
+
+    .generate-pdf{
+        display: inline-block;
+    }
+
+    .section-title,
+    .profile__description{
+        text-align: initial;
+    }
+
+    .home__container{
+        gap: 1.5rem;
+    }
+
+    .home__button-movil{
+        display: none;
+    }
+
+    .references__container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .languages__content{
+        grid-template-columns: repeat(3, max-content);
+        column-gap: 3.5rem;
+    }
+
+    .interests__container{
+        grid-template-columns: repeat(4, max-content);
+        column-gap: 3.5rem;
+    }
+	.go-back{
+		position: absolute;
+		right: 5rem;
+		top: 5rem;
+		display: inline-block;
+	}
+
+}
+</style>

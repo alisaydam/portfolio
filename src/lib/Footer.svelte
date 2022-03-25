@@ -1,5 +1,9 @@
+<script>
+	export let content
+</script>
+
 <footer id="contact">
-	<h5>Find me at :</h5>
+	<h5>{content.footer}</h5>
 	<a target="_blank" href="https://www.github.com/alisaydam" title="Github"
 		><svg viewBox="0 0 30 30" width="26px" height="26px">
 			<path

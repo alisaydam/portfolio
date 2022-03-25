@@ -1,15 +1,13 @@
 <script>
 	import ProjectCard from './ProjectCard.svelte';
 	export let content;
-
-	let tabs = content.projects.projectTabs;
-	let activeTab = content.projects.projectTabs[0];
+  
 </script>
 
 <h2 id="projects">{content.projects.title}</h2>
 <div class="container">
 	{#each content.projects.projects as project}
-		<ProjectCard {tabs} {activeTab} {project} />
+		<ProjectCard tabs={content.projects.projectTabs} activeTab={content.projects.projectTabs.overview} {project} />
 	{/each}
 </div>
 

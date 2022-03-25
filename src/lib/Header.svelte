@@ -1,17 +1,17 @@
 <script>
+	export let content;
 </script>
 
 <header>
 	<div class="container">
 		<img src="hero.png" alt="" />
 		<div class="about">
-			<p>Hi there, I am</p>
+			<p>{content.header.hello}</p>
 			<h1>Ali Saydam.</h1>
 			<p>
-				I am a web developer located in Turkey. Lorem, ipsum dolor sit amet consectetur adipisicing
-				elit. Asperiores iste possimus voluptates minus iure quis quia ullam sapiente voluptate
-				facilis!
+				{content.header.about}
 			</p>
+			<a href="/cv/resume">{content.header.cv}</a>
 		</div>
 	</div>
 </header>

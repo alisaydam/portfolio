@@ -3,19 +3,18 @@
 	export let activeTab;
 	export let project;
 </script>
-
 <div class="wrapper">
 	<h4 class="title">{project.name}</h4>
 	<div class="project-card">
 		<div class="tabs">
-			<button on:click={() => (activeTab = tabs[0])} class:active={tabs[0] === activeTab}
-				>{tabs[0]}</button
+			<button on:click={() => activeTab = tabs.overview} class:active={tabs.overview === activeTab}
+				>{tabs.overview}</button
 			>
-			<button on:click={() => (activeTab = tabs[1])} class:active={tabs[1] === activeTab}
-				>{tabs[1]}</button
+			<button on:click={() => activeTab = tabs.usedTech} class:active={tabs.usedTech === activeTab}
+				>{tabs.usedTech}</button
 			>
 		</div>
-		{#if activeTab === tabs[0]}
+		{#if activeTab === tabs.overview}
 			<div class="overview">
 				<p>
 					{project.overview}

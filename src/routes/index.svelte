@@ -18,16 +18,15 @@
 <svelte:window bind:scrollY={y} />
 
 <Navbar {content} on:language={toggleLanguage}/>
-<Header />
-<a href="/cv	/resume">cccc</a>
+<Header {content} />
 {#if y > 50}
 <a href="#top" title="Go to top" class="scrolltop" id="scroll-top" class:show-scroll={showScrollTopButton}>
 	<i class="bx bx-up-arrow-alt scrolltop__icon" />
 </a>
 {/if}
-<TechStack content={englishContent} />
-<Projects content={englishContent} />
-<Footer />
+<TechStack {content} />
+<Projects {content}/>
+<Footer {content}/>
 
 <style>
 	.scrolltop{
