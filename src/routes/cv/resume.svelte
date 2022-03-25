@@ -1,5 +1,4 @@
 <script>
-	import html2pdf from 'html2pdf.js';
 	import css from '../../cv.css';
 	let active = false;
 	let y;
@@ -24,7 +23,7 @@
 		let opt = {
 			filename: resumeNeme
 		};
-		html2pdf()
+		html2PDF()
 			.set(opt)
 			.from(areaCV)
 			.save()
@@ -48,7 +47,7 @@
 <svelte:window bind:scrollY={y} />
 <body>
 	<a href="https:www.alisaydam.one" class="nav__link go-back">
-		<i class="bx bxs-left-arrow-circle nav__icon" /> 
+		<i class="bx bxs-left-arrow-circle nav__icon" />
 	</a>
 	<header class="l-header" id="header">
 		<nav class="nav bd-container">
@@ -116,7 +115,7 @@
 
 							<!-- Download Button -->
 							<div>
-								<a download="" href="/ali-saydam-light.pdf" class="home__button-movil">Download</a>
+								<a download=""  href={themeIcon === "moon" ? "/ali-saydam-light.pdf": "/ali-saydam-dark.pdf"}  class="home__button-movil">Download</a>
 							</div>
 						</div>
 
@@ -136,13 +135,14 @@
 								<i class="bx bx-phone home__icon" />+90 543 355 27 94
 							</span>
 						</div>
-						<i class="bx bx-{themeIcon} change-theme" title="Theme" on:click={toggleTheme} />
-						<i
-							class="bx bx-download generate-pdf"
-							title="Generate PDF"
-							id="resume-button"
-							on:click={resumeDownload}
-						/>
+						<a download="" href={themeIcon === "moon" ? "/ali-saydam-light.pdf": "/ali-saydam-dark.pdf"} >
+							<i class="bx bx-{themeIcon} change-theme" title="Theme" on:click={toggleTheme} />
+							<i
+								class="bx bx-download generate-pdf"
+								title="Generate PDF"
+								id="resume-button"
+							/></a
+						>
 					</div>
 					<!-- Theme change button -->
 				</secttion>
@@ -305,19 +305,26 @@
 								<div class="certificate__content">
 									<h3 class="certificate__title">The Odin Project</h3>
 									<p class="certificate__description">
-										The Odin Project provides an oline free open source coding curriculum that helped me to learn wen development technologies like JS, HTML, CSS.  
+										The Odin Project provides an oline free open source coding curriculum that
+										helped me to learn wen development technologies like JS, HTML, CSS.
 									</p>
 								</div>
 								<div class="certificate__content">
 									<h3 class="certificate__title">patika.dev</h3>
 									<p class="certificate__description">
-										patika.dev is a udemy-like Turkish plarform provides free bootcamps & learning sources to its students. I learned Node.js from one of their many bootcamps. <br>  <a target="_blank" href="https://verified.cv/en/verify/88990993332764">Click to see my certificate</a>
+										patika.dev is a udemy-like Turkish plarform provides free bootcamps & learning
+										sources to its students. I learned Node.js from one of their many bootcamps. <br
+										/>
+										<a target="_blank" href="https://verified.cv/en/verify/88990993332764"
+											>Click to see my certificate</a
+										>
 									</p>
 								</div>
 								<div class="certificate__content">
 									<h3 class="certificate__title">Svelte.dev</h3>
 									<p class="certificate__description">
-										I raelly loved learn svelte from their official website. It is a great joy working with Svelte. 
+										I raelly loved learn svelte from their official website. It is a great joy
+										working with Svelte.
 									</p>
 								</div>
 							</div>

@@ -20,8 +20,5 @@
     "prettier-plugin-svelte": "^2.5.0",
     "svelte": "^3.44.0"
   },
-  "type": "module",
-  "dependencies": {
-    "html2pdf.js": "^0.9.3"
-  }
+  "type": "module"
 }
