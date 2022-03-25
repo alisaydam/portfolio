@@ -17,7 +17,9 @@
 	--proj3: #557b83;
 	--proj4: #39aea9;
 }
-
+html{
+	scroll-behavior: smooth;
+}
 .light {
 	--bg: var(--gray0);
 	--bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));

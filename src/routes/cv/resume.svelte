@@ -18,18 +18,18 @@
 		themeIcon = themeIcon === 'moon' ? 'sun' : 'moon';
 	};
 	const generateResume = () => {
-		const areaCV = window.document.querySelector('#resume');
-		let resumeNeme = themeIcon === 'moon' ? 'ali-saydam-light' : 'ali-saydam-dark';
-		let opt = {
-			filename: resumeNeme
-		};
-		html2PDF()
-			.set(opt)
-			.from(areaCV)
-			.save()
-			.then(() => {
-				setTimeout(removeScale, 1500);
-			});
+		// const areaCV = window.document.querySelector('#resume');
+		// let resumeNeme = themeIcon === 'moon' ? 'ali-saydam-light' : 'ali-saydam-dark';
+		// let opt = {
+		// 	filename: resumeNeme
+		// };
+		// html2PDF()
+		// 	.set(opt)
+		// 	.from(areaCV)
+		// 	.save()
+		// 	.then(() => {
+		// 		setTimeout(removeScale, 1500);
+		// 	});
 	};
 	const scaleCV = () => {
 		window.document.body.classList.add('scale-cv');
