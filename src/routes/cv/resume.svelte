@@ -1,6 +1,6 @@
-<script> 
+<script>
 	import cv from '../../cv.css';
-
+	// import html2pdf from "html2pdf.js"
 	let active = false;
 	let y;
 	$: showScrollTopButton = y > 200 ? true : false;
@@ -18,31 +18,34 @@
 		window.document.body.classList.toggle('dark-theme');
 		themeIcon = themeIcon === 'moon' ? 'sun' : 'moon';
 	};
-	const generateResume = () => {
-		// const areaCV = window.document.querySelector('#resume');
-		// let resumeNeme = themeIcon === 'moon' ? 'ali-saydam-light' : 'ali-saydam-dark';
-		// let opt = {
-		// 	filename: resumeNeme
-		// };
-		// html2PDF()
-		// 	.set(opt)
-		// 	.from(areaCV)
-		// 	.save()
-		// 	.then(() => {
-		// 		setTimeout(removeScale, 1500);
-		// 	});
-	};
-	const scaleCV = () => {
-		window.document.body.classList.add('scale-cv');
-	};
-	const removeScale = () => {
-		window.document.body.classList.remove('scale-cv');
-	};
-	const resumeDownload = () => {
-		scaleCV();
+	//  Window error netlify
+	// const generateResume = () => {
+	// 	const areaCV = window.document.querySelector('#resume');
+	// 	let resumeNeme = themeIcon === 'moon' ? 'ali-saydam-light' : 'ali-saydam-dark';
+	// 	let opt = {
+	// 		filename: resumeNeme
+	// 	};
+	// 	console.log(areaCV)
 
-		generateResume();
-	};
+	// 	html2pdf()
+	// 		.set(opt)
+	// 		.from(areaCV)
+	// 		.save()
+	// 	console.log("start")
+
+	// };
+	// const scaleCV = () => {
+	// 	window.document.body.classList.add('scale-cv');
+	// };
+	// const removeScale = () => {
+	// 	window.document.body.classList.remove('scale-cv');
+	// };
+	// const resumeDownload = () => {
+	// 	console.log("start")
+	// 	scaleCV();
+
+	// 	generateResume();
+	// };
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -50,6 +53,13 @@
 	<a href="/" class="nav__link go-back">
 		<i class="bx bxs-left-arrow-circle nav__icon" />
 	</a>
+	<!-- Download CV -->
+	<!-- <i
+	class="bx bx-download generate-pdf"
+	title="Generate PDF"
+	id="resume-button"
+	on:click={resumeDownload}
+/> -->
 	<header class="l-header" id="header">
 		<nav class="nav bd-container">
 			<a href="#" class="nav__logo">Smith</a>
@@ -168,6 +178,12 @@
 							<i class="bx bxl-github social__icon" /><a
 								target="_blank"
 								href="https://github.com/alisaydam">@alisaydam</a
+							>
+						</a>
+						<a href="" target="_blank" class="social__link">
+							<i class="bx bx-pointer social__icon" /><a
+								target="_blank"
+								href="https://alisaydam.one">alisaydam.one</a
 							>
 						</a>
 					</div>
@@ -423,7 +439,7 @@
 </body>
 
 <style>
- 	
+
 body {
 	margin: 0 0 var(--header-height) 0;
 	padding: 0;
