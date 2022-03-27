@@ -62,7 +62,7 @@
 /> -->
 	<header class="l-header" id="header">
 		<nav class="nav bd-container">
-			<a href="#" class="nav__logo">Smith</a>
+			<a href="#" class="nav__logo">Ali</a>
 			<div on:click={removeNav} class:show-menu={active} class="nav__menu" id="nav-menu">
 				<ul class="nav__list">
 					<li class="nav__item">
