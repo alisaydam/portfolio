@@ -135,7 +135,7 @@ export const englishContent = {
 	header: {
 		hello: 'Hi there, I am',
 		about:
-			'Hi, I am Ali Saydam. I am a fullstack developer located in Turkey. I am excited about web technologies and contstantly learning new things. ',
+			'I am a fullstack developer located in Turkey. I am excited about web technologies and contstantly learning new things. ',
 		cv: 'Go to my CV'
 	},
 	techStack: 'Tech Stack',
