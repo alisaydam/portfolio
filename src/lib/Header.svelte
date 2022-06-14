@@ -11,7 +11,7 @@
 			<p>
 				{content.header.about}
 			</p>
-			<a href="/cv/resume">{content.header.cv}</a>
+			<a href="alisaydam.pdf">{content.header.cv}</a>
 		</div>
 	</div>
 </header>
